@@ -23,11 +23,11 @@ document.getElementById('form').addEventListener('submit', async (event) => {
 
     try {
         // Fazer a requisição
-        const response = await fetch('/api/buscar-codigo', {
+        const response = await fetch('/buscar-codigo', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ frase })
-        });        
+        });
 
         const data = await response.json();
         console.log("Resposta do servidor:", data);
